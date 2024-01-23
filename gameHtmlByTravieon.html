@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Adventure Combat game</title>
+    <!-- This allows me to use my java script code in this game -->
+    <script src="JavaScriptCodeforGame.js">
+
+
+    </script>
+</head>
+
+
+<body>
+
+
+
+<!-- The header or title of my game -->
+<h1>Forrest Adventure</h1>
+
+<!--made a table for my game  -->
+<table border = "1">
+<!-- This is for the players name i gave a id called pName so i couold use it in my code -->
+<th> <h2 id = playersName><form  method = "Get"> <p>YourName <input type= "text" id = pName placeholder=" Enter A Name press Start"></p> </form></h2></th>
+
+<td><!-- this is so i can display the stats and my hp of my game all with id so i can change them on the fly -->
+     <h4 style = "text-align:center;"> Stats <p id = stats>Str:0  Int:0 Acc:0</p></h4>
+    Hp:  <p id = playerHPdisplay>0</p> 
+    Mp:  <p id = playerMPdisplay>0</p> 
+   
+   </td>
+
+
+
+ 
+<tr><!-- this is the combat menu, Sadly i never got to use it cause i didn't have enough time to get it working'  -->
+<td>CombatMenu:<p id = combatText>Not in combat</p> </td>
+<td><!-- this is the combat buttons i disable the in the beginning so you can't click them until they are in use' -->
+<button type = "attackbutton" disabled id = attackButton onclick ="attackEnemy()">Attack</button>
+<button type = "magicButton" disabled id= magicButton onclick ="attackWMagic()">Magic</button>
+<button type = "FleeButton" disabled id= fleeButton onclick ="flee()">Flee</button>
+<button type = "RestButton" id= restButton onclick ="rest()">Rest</button>
+</td></tr>
+</table>
+<!-- this is the enemy table that once you click start get hidden so you can't see it' -->
+<table id = enemyTable border = ".5" >
+<th> <h1 id = enemy><p>Enemy</p></h1></th>
+
+<td>EnemyHp: <p id = enemyHPDisplay>0</p> </td>
+
+
+
+
+
+
+</table>
+
+
+<!-- This text is the core of the game and i use it a lot to tell the player what is going on -->
+<p id = Dilogue1>You are heading on a adventure through the forrest to meet The king on a urgent Quest! 
+You may face monsters and random encounters in this forrest be prepare for Anything!</p>
+
+<!-- This is a debug system for the game so i can see what encounter is happening -->
+<p id = encounterTypeDebug> encounter type</p>
+
+
+<!-- this is the days that you do basically a timer so you can see whats going on and how many days your at -->
+<h3> Days:<p id = daysTillKing>0</p></h3>
+<!-- this basically starts the game by hiding things that arent in use -->
+<button type="Button" id = startgameButton onclick ="startGame()">Start</button>
+<!--this progressthe game and is the main button for it  -->
+<button type="Button" disabled id = advanceGame onclick ="advanceGame()">advance</button>
+<!-- these decide your choices of the game and are hidden when you press start -->
+<button type="Button"  id = firstOption onclick ="optionOneClick()">Option1</button>
+<button type="Button"  id = secondOption onclick ="optionTwoClick()">Option2</button>
+
+
+
+
+</body>
+</html>
